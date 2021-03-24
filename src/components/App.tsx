@@ -21,7 +21,7 @@ class _App extends React.Component<AppProps, AppState> {
   }
 
   componentDidUpdate(prevProps: AppProps): void {
-    if (!prevProps.todos.length && this.props.todos.length) {
+    if (prevProps.todos !== this.props.todos) {
       this.setState({ fetching: false });
     }
   }
@@ -51,7 +51,7 @@ class _App extends React.Component<AppProps, AppState> {
         <button type="button" onClick={this.onButtonClick}>
           Fetch
         </button>
-        {this.state.fetching ? "LOADING" : false}
+        {this.state.fetching ? "LOADING" : null}
         {this.renderList()}
       </div>
     );

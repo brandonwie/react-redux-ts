@@ -46,6 +46,7 @@
     "eslint": "^7.22.0",
     "eslint-config-airbnb-typescript-prettier": "^4.2.0",
     "prettier": "^2.2.1",
+    "redux-devtools-extension": "^2.13.9",
     "typescript": "^4.2.3"
   }
 }
